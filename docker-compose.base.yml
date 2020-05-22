@@ -1,0 +1,9 @@
+version: "3.4"
+services:
+  centos8zstdbase:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+      args:
+        centos: $OS8
+    image: aursu/zstdbuild:${OS8}-base

@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  centos8zstdbuild:
+    volumes:
+      - rpms:/home/centos/rpmbuild/SRPMS
+      - rpm8:/home/centos/rpmbuild/RPMS
+    build:
+      args:
+        centos: $OS8
+      context: .
+
+volumes:
+  rpms:
+    name: rpms
+  rpm8:
+    name: rpm8
